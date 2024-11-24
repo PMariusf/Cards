@@ -1,92 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-   <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <header>
- </header>
-  <body>
-    <div class="card-container">
-      <div class="card" id="name-card">
-          <!-- Front of the card -->
-          <div class="card-front">
-              <h1 id="card-name">John Doe</h1>
-              <p id="card-title">Web Developer</p>
-          </div>
-          <!-- Back of the card -->
-          <div class="card-back">
-              <h2>Contact Information</h2>
-              <p>Email: john.doe@example.com</p>
-              <p>Phone: +1234567890</p>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Card with To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <!-- Front of the card -->
+      <div class="card-front">
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+        <h3>Welcome to Your To-Do List!</h3>
       </div>
+      <!-- Back of the card -->
+      <div class="card-back">
+        <h3>Your To-Do List</h3>
+        <ul id="todo-list">
+          <!-- Dynamic to-do items will appear here -->
+        </ul>
+        <input type="text" id="todo-input" placeholder="Add a new task">
+        <button id="add-todo-btn">Add</button>
+      </div>
+    </div>
   </div>
-
-  <button id="changeColorButton">Change Card Color</button>
-
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
 
 
 
- <!-- Latest compiled and minified CSS -->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<div class="container our-services">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="flip-container">
-        <div class="flipper">
-          <div class="front" style="background: #009345 !important;">
-            <img class="lazyload" src="Dhhavac 1.png"Avatar" style="width:150px;height:150px;">
-            <h3>Demon Hunter</h3>
-          </div>
-          <div class="back" style="background: #009345 !important;">
-            <h5>Demon Hunter</h5>
-            <p id="myText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, distinctio.
-            </p>
-            <button id="changeTextButton">Change Text</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="flip-container">
-        <div class="flipper">
-          <div class="front" style="background: #311B92;">
-            <img class="lazyload" src="blizzia.png" alt="Avatar" style="width:150px;height:150px;">
-            <h3>Mage</h3>
-          </div>
-          <div class="back" style="background: #311B92;">
-            <h5>REHABILITATION</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, distinctio.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="flip-container">
-        <div class="flipper">
-          <div class="front" style="background: #009345;">
-            <img class="lazyload" src="BelinaNF 1.png" alt="Avatar" style="width:150px;height:150px;">
-            <h3>Rogue</h3>
-          </div>
-          <div class="back" style="background: #009345;">
-            <h5>ELDERLY REHAB</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, distinctio.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>-->

@@ -1,45 +1,84 @@
+//document.addEventListener('DOMContentLoaded', () => {
+ // const addButton = document.getElementById('add-todo-btn');
+  //const inputField = document.getElementById('todo-input');
+  //const todoList = document.getElementById('todo-list');
 
+  //addButton.addEventListener('click', () => {
+    //const task = inputField.value.trim();
+    //if (task) {
+      //const listItem = document.createElement('li');
+     // listItem.textContent = task;
 
-// Get the button and the paragraph element by their IDs
-// Get the button and the card by ID
-const button = document.getElementById("changeColorButton");
-const card = document.getElementById("name-card");
-const cardFront = document.querySelector(".card-front");
-const cardBack = document.querySelector(".card-back");
+      //listItem.addEventListener('click', () => {
+        //listItem.remove();
+      //});
 
-// Array of random colors
-const colors = ['#FF6347', '#FFD700', '#32CD32', '#8A2BE2', '#FF1493', '#1E90FF'];
+     // todoList.appendChild(listItem);
+     // inputField.value = '';
+   // }
+  //});
 
-// Add event listener to the button
-button.addEventListener("click", function() {
-    // Pick random colors for the front and back of the card
-    const frontColor = colors[Math.floor(Math.random() * colors.length)];
-    const backColor = colors[Math.floor(Math.random() * colors.length)];
+  //inputField.addEventListener('keypress', (e) => {
+    //if (e.key === 'Enter') {
+     // addButton.click();
+   // }
+  //});
+//});
+document.addEventListener('DOMContentLoaded', () => {
+  const addButton = document.getElementById('add-todo-btn');
+  const inputField = document.getElementById('todo-input');
+  const todoList = document.getElementById('todo-list');
 
-    // Change the background colors of the card's front and back
-    cardFront.style.backgroundColor = frontColor;
-    cardBack.style.backgroundColor = backColor;
+  // Function to create a new to-do item
+  const createTodoItem = (task) => {
+    const listItem = document.createElement('li');
+    listItem.className = 'todo-item';
+
+    const textSpan = document.createElement('span');
+    textSpan.textContent = task;
+    textSpan.className = 'todo-text';
+    listItem.appendChild(textSpan);
+
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    editButton.className = 'edit-btn';
+    listItem.appendChild(editButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Remove';
+    deleteButton.className = 'delete-btn';
+    listItem.appendChild(deleteButton);
+
+    // Edit functionality
+    editButton.addEventListener('click', () => {
+      const newTask = prompt('Edit your task:', textSpan.textContent);
+      if (newTask !== null && newTask.trim() !== '') {
+        textSpan.textContent = newTask.trim();
+      }
+    });
+
+    // Remove functionality
+    deleteButton.addEventListener('click', () => {
+      listItem.remove();
+    });
+
+    return listItem;
+  };
+
+  // Add new task
+  addButton.addEventListener('click', () => {
+    const task = inputField.value.trim();
+    if (task) {
+      const listItem = createTodoItem(task);
+      todoList.appendChild(listItem);
+      inputField.value = '';
+    }
+  });
+
+  // Add task on pressing Enter
+  inputField.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      addButton.click();
+    }
+  });
 });
-
-
-
-
-//const button = document.getElementById("changeTextButton");
-//const textElement = document.getElementById("myText");
-
-// Add an event listener to the button that changes the text when clicked
-//button.addEventListener("click", function() {
- //   textElement.textContent = "The text has been changed!";
-//});
-
-
-// Let's say you want to change the name and title when a button is clicked
-//const button = document.getElementById("changeInfoButton");
-//const nameElement = document.getElementById("card-name");
-//const titleElement = document.getElementById("card-title");
-
-//button.addEventListener("click", function() {
-    // Change the text of name and title
-  //  nameElement.textContent = "Jane Smith";
-   // titleElement.textContent = "Software Engineer";
-//});
