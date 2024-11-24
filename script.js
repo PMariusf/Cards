@@ -1,33 +1,45 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const card = document.getElementById("name-card");
-  const cardName = document.getElementById("card-name");
-  const cardTitle = document.getElementById("card-title");
-  const cardBack = document.querySelector(".card-back");
 
-  // Button to change the card color and text
-  const changeButton = document.createElement("button");
-  changeButton.innerText = "Change Info";
-  document.body.appendChild(changeButton);
 
-  // Function to change text and colors when the button is clicked
-  changeButton.addEventListener("click", function() {
-      // Change text
-      cardName.innerText = "Jane Smith";
-      cardTitle.innerText = "Software Engineer";
-      
-      // Change the background color and text color
-      const colors = ['#FF6347', '#FFD700', '#32CD32', '#8A2BE2', '#FF1493'];
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+// Get the button and the paragraph element by their IDs
+// Get the button and the card by ID
+const button = document.getElementById("changeColorButton");
+const card = document.getElementById("name-card");
+const cardFront = document.querySelector(".card-front");
+const cardBack = document.querySelector(".card-back");
 
-      // Change front color
-      card.querySelector(".card-front").style.backgroundColor = randomColor;
+// Array of random colors
+const colors = ['#FF6347', '#FFD700', '#32CD32', '#8A2BE2', '#FF1493', '#1E90FF'];
 
-      // Change back color
-      const randomBackColor = colors[Math.floor(Math.random() * colors.length)];
-      card.querySelector(".card-back").style.backgroundColor = randomBackColor;
-      
-      // You can also change the text color dynamically:
-      card.querySelector(".card-front").style.color = randomColor;
-      card.querySelector(".card-back").style.color = randomBackColor;
-  });
+// Add event listener to the button
+button.addEventListener("click", function() {
+    // Pick random colors for the front and back of the card
+    const frontColor = colors[Math.floor(Math.random() * colors.length)];
+    const backColor = colors[Math.floor(Math.random() * colors.length)];
+
+    // Change the background colors of the card's front and back
+    cardFront.style.backgroundColor = frontColor;
+    cardBack.style.backgroundColor = backColor;
 });
+
+
+
+
+//const button = document.getElementById("changeTextButton");
+//const textElement = document.getElementById("myText");
+
+// Add an event listener to the button that changes the text when clicked
+//button.addEventListener("click", function() {
+ //   textElement.textContent = "The text has been changed!";
+//});
+
+
+// Let's say you want to change the name and title when a button is clicked
+//const button = document.getElementById("changeInfoButton");
+//const nameElement = document.getElementById("card-name");
+//const titleElement = document.getElementById("card-title");
+
+//button.addEventListener("click", function() {
+    // Change the text of name and title
+  //  nameElement.textContent = "Jane Smith";
+   // titleElement.textContent = "Software Engineer";
+//});
