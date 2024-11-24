@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -79,16 +80,10 @@ body {
 #todo-list {
   list-style-type: none;
   padding: 0;
+  width: 90%;
 }
 
 #todo-list li {
-  margin: 5px 0;
-  background: #e6e6e6;
-  padding: 5px;
-  border-radius: 4px;
-}
-
-.todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;

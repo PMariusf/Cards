@@ -1,33 +1,23 @@
-//document.addEventListener('DOMContentLoaded', () => {
- // const addButton = document.getElementById('add-todo-btn');
-  //const inputField = document.getElementById('todo-input');
-  //const todoList = document.getElementById('todo-list');
 
-  //addButton.addEventListener('click', () => {
-    //const task = inputField.value.trim();
-    //if (task) {
-      //const listItem = document.createElement('li');
-     // listItem.textContent = task;
-
-      //listItem.addEventListener('click', () => {
-        //listItem.remove();
-      //});
-
-     // todoList.appendChild(listItem);
-     // inputField.value = '';
-   // }
-  //});
-
-  //inputField.addEventListener('keypress', (e) => {
-    //if (e.key === 'Enter') {
-     // addButton.click();
-   // }
-  //});
-//});
+//terst this shit
 document.addEventListener('DOMContentLoaded', () => {
   const addButton = document.getElementById('add-todo-btn');
   const inputField = document.getElementById('todo-input');
   const todoList = document.getElementById('todo-list');
+  const cardFrontImage = document.querySelector('.card-front img');
+
+  // Array of random image URLs
+  const images = [
+    'https://via.placeholder.com/300x200?text=Image+1',
+    'https://via.placeholder.com/300x200?text=Image+2',
+    'https://via.placeholder.com/300x200?text=Image+3',
+    'https://via.placeholder.com/300x200?text=Image+4',
+    'https://via.placeholder.com/300x200?text=Image+5'
+  ];
+
+  // Set a random image to the card front
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+  cardFrontImage.src = randomImage;
 
   // Function to create a new to-do item
   const createTodoItem = (task) => {
@@ -82,3 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
