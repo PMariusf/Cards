@@ -6,10 +6,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #982626;
    background-image: url("viking_shield\ copy.png");
-    background-color: #cccccc;
-    
+    background-color: #c64040;
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+
    }
 
 
@@ -71,6 +74,7 @@ main,
 }
 
 .card-back {
+  
   background: #a59494;
   transform: rotateY(180deg);
 }
