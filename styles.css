@@ -7,7 +7,11 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #f4f4f4;
-}
+   background-image: url("viking_shield\ copy.png");
+    background-color: #cccccc;
+    
+   }
+
 
 main {
   height: 100vh;
