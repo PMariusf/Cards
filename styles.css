@@ -12,7 +12,7 @@ body {
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
-
+    opacity: 0.8;
    }
 
 
@@ -43,6 +43,7 @@ main,
   transform-style: preserve-3d;
   transform: rotateY(0deg);
   transition: transform 0.6s;
+  
 }
 
 .card-container:hover .card {
@@ -58,14 +59,14 @@ main,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #ccc;
-  border-radius: 8px;
+  border: 3px solid #664444;
+  border-radius: 10px;
   box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
 .card-front {
-  background: #a99e9e;
+  background: #d06666;
 }
 
 .card-front img {
@@ -75,7 +76,7 @@ main,
 
 .card-back {
   
-  background: #a59494;
+  background: #e85d5d;
   transform: rotateY(180deg);
 }
 
